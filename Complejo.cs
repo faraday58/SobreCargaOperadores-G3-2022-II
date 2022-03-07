@@ -19,9 +19,20 @@ namespace SobreCargaOperadores_G3_2022_II
 
         public override string ToString()
         {
-            //string Format: Da formato tipo WriteLine a una cadena
-            return string.Format( " {0} + {1}i",real,imaginaria) ;
+            if( imaginaria == 0  )
+            {
+                return string.Format("{0}", real);
+            }
+            else
+            {
+                //string Format: Da formato tipo WriteLine a una cadena
+                return string.Format(" {0} + {1}i", real, imaginaria);
+            }
+            
         }
 
+
+
+      
     }
 }
