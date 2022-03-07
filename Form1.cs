@@ -5,6 +5,7 @@ namespace SobreCargaOperadores_G3_2022_II
 {
     public partial class Form1 : Form
     {
+        bool validaError;
         public Form1()
         {
             InitializeComponent();
@@ -12,16 +13,50 @@ namespace SobreCargaOperadores_G3_2022_II
 
         private void btnSumar_Click(object sender, EventArgs e)
         {
-            float real = float.Parse(txtbComReal1.Text);
-            float imaginaria = float.Parse(txtbComIma1.Text);
-            Complejo c1 = new Complejo(real, imaginaria);
+            try
+            {
+                validaError = false;
+                if(txtbComReal1.Text == "" || txtbComIma1.Text == ""   )
+                {
+                    validaError = true;
+                    string error = "No se deben dejar campos vacíos";
+                    throw new ApplicationException(error);
+                }
+                if(!validaError)
+                {
+                    errorProvider1.Clear();
+                }
+                float real = float.Parse(txtbComReal1.Text);
+                float imaginaria = float.Parse(txtbComIma1.Text);
+                Complejo c1 = new Complejo(real, imaginaria);
 
-            real = float.Parse(txtbComReal2.Text);
-            imaginaria = float.Parse(txtbComIma2.Text);
-            Complejo c2 = new Complejo(real, imaginaria);
 
-            Complejo c3 = c1 + c2;
-            lbResultado.Text = c3.ToString();
+                real = float.Parse(txtbComReal2.Text);
+                imaginaria = float.Parse(txtbComIma2.Text);
+                Complejo c2 = new Complejo(real, imaginaria);
+
+                Complejo c3 = c1 + c2;
+                lbResultado.Text = c3.ToString();
+            }
+            catch(ApplicationException error  )
+            {
+                errorProvider1.SetError(lbImaginario1, error.Message);
+            }
+        
+            catch (FormatException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+
+
+
+
+
 
         }
 

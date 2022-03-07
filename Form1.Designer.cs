@@ -29,6 +29,7 @@ namespace SobreCargaOperadores_G3_2022_II
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtbComReal1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbComIma1 = new System.Windows.Forms.TextBox();
@@ -36,7 +37,7 @@ namespace SobreCargaOperadores_G3_2022_II
             this.txtbComReal2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbComIma2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbImaginario1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,125 +48,141 @@ namespace SobreCargaOperadores_G3_2022_II
             this.rdbResta = new System.Windows.Forms.RadioButton();
             this.rdbMultiplica = new System.Windows.Forms.RadioButton();
             this.rdbConjuga = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbComReal1
             // 
-            this.txtbComReal1.Location = new System.Drawing.Point(120, 184);
+            this.txtbComReal1.Location = new System.Drawing.Point(160, 228);
+            this.txtbComReal1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbComReal1.Name = "txtbComReal1";
-            this.txtbComReal1.Size = new System.Drawing.Size(100, 31);
+            this.txtbComReal1.Size = new System.Drawing.Size(132, 38);
             this.txtbComReal1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(259, 190);
+            this.label1.Location = new System.Drawing.Point(345, 236);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 25);
+            this.label1.Size = new System.Drawing.Size(31, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "+";
             // 
             // txtbComIma1
             // 
-            this.txtbComIma1.Location = new System.Drawing.Point(330, 181);
+            this.txtbComIma1.Location = new System.Drawing.Point(440, 224);
+            this.txtbComIma1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbComIma1.Name = "txtbComIma1";
-            this.txtbComIma1.Size = new System.Drawing.Size(100, 31);
+            this.txtbComIma1.Size = new System.Drawing.Size(132, 38);
             this.txtbComIma1.TabIndex = 0;
             // 
             // lbOperador
             // 
             this.lbOperador.AutoSize = true;
             this.lbOperador.Font = new System.Drawing.Font("Matura MT Script Capitals", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOperador.Location = new System.Drawing.Point(520, 187);
+            this.lbOperador.Location = new System.Drawing.Point(693, 232);
+            this.lbOperador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbOperador.Name = "lbOperador";
-            this.lbOperador.Size = new System.Drawing.Size(27, 28);
+            this.lbOperador.Size = new System.Drawing.Size(34, 36);
             this.lbOperador.TabIndex = 1;
             this.lbOperador.Text = "+";
             // 
             // txtbComReal2
             // 
-            this.txtbComReal2.Location = new System.Drawing.Point(632, 181);
+            this.txtbComReal2.Location = new System.Drawing.Point(843, 224);
+            this.txtbComReal2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbComReal2.Name = "txtbComReal2";
-            this.txtbComReal2.Size = new System.Drawing.Size(100, 31);
+            this.txtbComReal2.Size = new System.Drawing.Size(132, 38);
             this.txtbComReal2.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(771, 187);
+            this.label3.Location = new System.Drawing.Point(1028, 232);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 25);
+            this.label3.Size = new System.Drawing.Size(31, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "+";
             // 
             // txtbComIma2
             // 
-            this.txtbComIma2.Location = new System.Drawing.Point(842, 178);
+            this.txtbComIma2.Location = new System.Drawing.Point(1123, 221);
+            this.txtbComIma2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbComIma2.Name = "txtbComIma2";
-            this.txtbComIma2.Size = new System.Drawing.Size(100, 31);
+            this.txtbComIma2.Size = new System.Drawing.Size(132, 38);
             this.txtbComIma2.TabIndex = 0;
             // 
-            // label4
+            // lbImaginario1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Matura MT Script Capitals", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(436, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 28);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "i";
+            this.lbImaginario1.AutoSize = true;
+            this.lbImaginario1.Font = new System.Drawing.Font("Matura MT Script Capitals", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImaginario1.Location = new System.Drawing.Point(581, 232);
+            this.lbImaginario1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbImaginario1.Name = "lbImaginario1";
+            this.lbImaginario1.Size = new System.Drawing.Size(24, 36);
+            this.lbImaginario1.TabIndex = 1;
+            this.lbImaginario1.Text = "i";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Matura MT Script Capitals", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(948, 181);
+            this.label5.Location = new System.Drawing.Point(1264, 224);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 28);
+            this.label5.Size = new System.Drawing.Size(24, 36);
             this.label5.TabIndex = 1;
             this.label5.Text = "i";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 126);
+            this.label6.Location = new System.Drawing.Point(285, 156);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 25);
+            this.label6.Size = new System.Drawing.Size(159, 32);
             this.label6.TabIndex = 1;
             this.label6.Text = "Complejo 1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(750, 126);
+            this.label7.Location = new System.Drawing.Point(1000, 156);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 25);
+            this.label7.Size = new System.Drawing.Size(159, 32);
             this.label7.TabIndex = 1;
             this.label7.Text = "Complejo 2";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1014, 187);
+            this.label8.Location = new System.Drawing.Point(1352, 232);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 25);
+            this.label8.Size = new System.Drawing.Size(31, 32);
             this.label8.TabIndex = 1;
             this.label8.Text = "=";
             // 
             // lbResultado
             // 
             this.lbResultado.AutoSize = true;
-            this.lbResultado.Location = new System.Drawing.Point(1084, 181);
+            this.lbResultado.Location = new System.Drawing.Point(1445, 224);
+            this.lbResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbResultado.Name = "lbResultado";
-            this.lbResultado.Size = new System.Drawing.Size(53, 25);
+            this.lbResultado.Size = new System.Drawing.Size(70, 32);
             this.lbResultado.TabIndex = 1;
             this.lbResultado.Text = "0+0i";
             // 
             // btnSumar
             // 
-            this.btnSumar.Location = new System.Drawing.Point(461, 263);
+            this.btnSumar.Location = new System.Drawing.Point(615, 326);
+            this.btnSumar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSumar.Name = "btnSumar";
-            this.btnSumar.Size = new System.Drawing.Size(190, 60);
+            this.btnSumar.Size = new System.Drawing.Size(253, 74);
             this.btnSumar.TabIndex = 2;
             this.btnSumar.Text = "Sumar";
             this.btnSumar.UseVisualStyleBackColor = true;
@@ -174,9 +191,10 @@ namespace SobreCargaOperadores_G3_2022_II
             // rdbSuma
             // 
             this.rdbSuma.AutoSize = true;
-            this.rdbSuma.Location = new System.Drawing.Point(1290, 50);
+            this.rdbSuma.Location = new System.Drawing.Point(1720, 62);
+            this.rdbSuma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbSuma.Name = "rdbSuma";
-            this.rdbSuma.Size = new System.Drawing.Size(98, 29);
+            this.rdbSuma.Size = new System.Drawing.Size(126, 36);
             this.rdbSuma.TabIndex = 3;
             this.rdbSuma.TabStop = true;
             this.rdbSuma.Text = "Suma";
@@ -186,9 +204,10 @@ namespace SobreCargaOperadores_G3_2022_II
             // rdbResta
             // 
             this.rdbResta.AutoSize = true;
-            this.rdbResta.Location = new System.Drawing.Point(1290, 103);
+            this.rdbResta.Location = new System.Drawing.Point(1720, 128);
+            this.rdbResta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbResta.Name = "rdbResta";
-            this.rdbResta.Size = new System.Drawing.Size(99, 29);
+            this.rdbResta.Size = new System.Drawing.Size(126, 36);
             this.rdbResta.TabIndex = 3;
             this.rdbResta.TabStop = true;
             this.rdbResta.Text = "Resta";
@@ -198,9 +217,10 @@ namespace SobreCargaOperadores_G3_2022_II
             // rdbMultiplica
             // 
             this.rdbMultiplica.AutoSize = true;
-            this.rdbMultiplica.Location = new System.Drawing.Point(1290, 163);
+            this.rdbMultiplica.Location = new System.Drawing.Point(1720, 202);
+            this.rdbMultiplica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbMultiplica.Name = "rdbMultiplica";
-            this.rdbMultiplica.Size = new System.Drawing.Size(174, 29);
+            this.rdbMultiplica.Size = new System.Drawing.Size(226, 36);
             this.rdbMultiplica.TabIndex = 3;
             this.rdbMultiplica.TabStop = true;
             this.rdbMultiplica.Text = "Multiplicación";
@@ -209,19 +229,24 @@ namespace SobreCargaOperadores_G3_2022_II
             // rdbConjuga
             // 
             this.rdbConjuga.AutoSize = true;
-            this.rdbConjuga.Location = new System.Drawing.Point(1290, 226);
+            this.rdbConjuga.Location = new System.Drawing.Point(1720, 280);
+            this.rdbConjuga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbConjuga.Name = "rdbConjuga";
-            this.rdbConjuga.Size = new System.Drawing.Size(147, 29);
+            this.rdbConjuga.Size = new System.Drawing.Size(191, 36);
             this.rdbConjuga.TabIndex = 3;
             this.rdbConjuga.TabStop = true;
             this.rdbConjuga.Text = "Conjugado";
             this.rdbConjuga.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1781, 351);
+            this.ClientSize = new System.Drawing.Size(2375, 510);
             this.Controls.Add(this.rdbConjuga);
             this.Controls.Add(this.rdbMultiplica);
             this.Controls.Add(this.rdbResta);
@@ -235,13 +260,15 @@ namespace SobreCargaOperadores_G3_2022_II
             this.Controls.Add(this.lbResultado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbImaginario1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbComReal2);
             this.Controls.Add(this.txtbComReal1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +283,7 @@ namespace SobreCargaOperadores_G3_2022_II
         private System.Windows.Forms.TextBox txtbComReal2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbComIma2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbImaginario1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -267,6 +294,7 @@ namespace SobreCargaOperadores_G3_2022_II
         private System.Windows.Forms.RadioButton rdbResta;
         private System.Windows.Forms.RadioButton rdbMultiplica;
         private System.Windows.Forms.RadioButton rdbConjuga;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
