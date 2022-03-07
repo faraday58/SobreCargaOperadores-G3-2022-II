@@ -13,63 +13,99 @@ namespace SobreCargaOperadores_G3_2022_II
 
         private void btnSumar_Click(object sender, EventArgs e)
         {
-            try
+
+            float real;
+            float imaginaria;
+            if (rdbSuma.Checked)
             {
-                validaError = false;
-                if(txtbComReal1.Text == "" || txtbComIma1.Text == ""   )
+                #region Sumar
+                try
                 {
-                    validaError = true;
-                    string error = "No se deben dejar campos vacíos";
-                    throw new ApplicationException(error);
+                    validaError = false;
+                    if (txtbComReal1.Text == "" || txtbComIma1.Text == "")
+                    {
+                        validaError = true;
+                        string error = "No se deben dejar campos vacíos";
+                        throw new ApplicationException(error);
+                    }
+                    if (!validaError)
+                    {
+                        errorProvider1.Clear();
+                    }
+                    real = float.Parse(txtbComReal1.Text);
+                    imaginaria = float.Parse(txtbComIma1.Text);
+                    Complejo c1 = new Complejo(real, imaginaria);
+
+
+                    real = float.Parse(txtbComReal2.Text);
+                    imaginaria = float.Parse(txtbComIma2.Text);
+                    Complejo c2 = new Complejo(real, imaginaria);
+
+                    Complejo c3 = c1 + c2;
+                    lbResultado.Text = c3.ToString();
                 }
-                if(!validaError)
+                catch (ApplicationException error)
                 {
-                    errorProvider1.Clear();
+                    errorProvider1.SetError(lbImaginario1, error.Message);
                 }
-                float real = float.Parse(txtbComReal1.Text);
-                float imaginaria = float.Parse(txtbComIma1.Text);
-                Complejo c1 = new Complejo(real, imaginaria);
 
-
-                real = float.Parse(txtbComReal2.Text);
-                imaginaria = float.Parse(txtbComIma2.Text);
-                Complejo c2 = new Complejo(real, imaginaria);
-
-                Complejo c3 = c1 + c2;
-                lbResultado.Text = c3.ToString();
+                catch (FormatException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+                #endregion
             }
-            catch(ApplicationException error  )
+            if ( rdbConjuga.Checked  )
             {
-                errorProvider1.SetError(lbImaginario1, error.Message);
+                try
+                {
+                    real = float.Parse(txtbComReal1.Text);
+                    imaginaria = float.Parse(txtbComIma1.Text);
+                    Complejo c1 = new Complejo(real, imaginaria);
+                    lbResultado.Text = (~c1).ToString();
+                }
+                catch(FormatException error )
+                {
+                    MessageBox.Show(error.Message);
+
+                }
+
             }
-        
-            catch (FormatException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
-
-
-
-
-
 
 
         }
 
         private void rdbSuma_CheckedChanged(object sender, EventArgs e)
         {
+            lbConjugado.Visible = false;
             lbOperador.Text = "+";
             btnSumar.Text = "Sumar";
         }
 
         private void rdbResta_CheckedChanged(object sender, EventArgs e)
         {
+            lbConjugado.Visible = false;
             lbOperador.Text = "-";
             btnSumar.Text = "Resta";
+        }
+
+        private void rdbMultiplica_CheckedChanged(object sender, EventArgs e)
+        {
+            lbConjugado.Visible = false;
+            lbOperador.Text = "*";
+            btnSumar.Text = "Multiplicar";
+        }
+
+        private void rdbConjuga_CheckedChanged(object sender, EventArgs e)
+        {
+            lbConjugado.Visible = true;
+
+            lbOperador.Text = "";
+            btnSumar.Text = "Conjugar";
         }
     }
 }

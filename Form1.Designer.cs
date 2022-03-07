@@ -49,6 +49,7 @@ namespace SobreCargaOperadores_G3_2022_II
             this.rdbMultiplica = new System.Windows.Forms.RadioButton();
             this.rdbConjuga = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbConjugado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +141,7 @@ namespace SobreCargaOperadores_G3_2022_II
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 156);
+            this.label6.Location = new System.Drawing.Point(293, 114);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 32);
@@ -225,6 +226,7 @@ namespace SobreCargaOperadores_G3_2022_II
             this.rdbMultiplica.TabStop = true;
             this.rdbMultiplica.Text = "Multiplicación";
             this.rdbMultiplica.UseVisualStyleBackColor = true;
+            this.rdbMultiplica.CheckedChanged += new System.EventHandler(this.rdbMultiplica_CheckedChanged);
             // 
             // rdbConjuga
             // 
@@ -237,10 +239,22 @@ namespace SobreCargaOperadores_G3_2022_II
             this.rdbConjuga.TabStop = true;
             this.rdbConjuga.Text = "Conjugado";
             this.rdbConjuga.UseVisualStyleBackColor = true;
+            this.rdbConjuga.CheckedChanged += new System.EventHandler(this.rdbConjuga_CheckedChanged);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // lbConjugado
+            // 
+            this.lbConjugado.AutoSize = true;
+            this.lbConjugado.Location = new System.Drawing.Point(170, 178);
+            this.lbConjugado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbConjugado.Name = "lbConjugado";
+            this.lbConjugado.Size = new System.Drawing.Size(390, 32);
+            this.lbConjugado.TabIndex = 1;
+            this.lbConjugado.Text = "_________________________";
+            this.lbConjugado.Visible = false;
             // 
             // Form1
             // 
@@ -261,6 +275,7 @@ namespace SobreCargaOperadores_G3_2022_II
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbImaginario1);
+            this.Controls.Add(this.lbConjugado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbComReal2);
@@ -295,6 +310,7 @@ namespace SobreCargaOperadores_G3_2022_II
         private System.Windows.Forms.RadioButton rdbMultiplica;
         private System.Windows.Forms.RadioButton rdbConjuga;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lbConjugado;
     }
 }
 
